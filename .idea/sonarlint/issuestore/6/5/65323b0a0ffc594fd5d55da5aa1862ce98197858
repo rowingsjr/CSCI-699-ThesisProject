@@ -1,0 +1,11 @@
+
+
+java:S1104"VMake correctPin a static final constant or non-public and provide accessors if needed.(šşÂÎûÿÿÿÿ8€ñóåï1J$1d46c5de-feff-4afa-bea4-260285dba785
+—
+java:S1104	"TMake duration a static final constant or non-public and provide accessors if needed.(Š“ó 8€ñóåï1J$5afefdac-35e8-4800-ab28-ca4c98c012a1
+x
+java:S1444"0Make this "public static correctPin" field final(šşÂÎûÿÿÿÿ8€ñóåï1J$ccbd04c5-4a74-48cc-953b-4bdb3aa25d04
+q
+java:S1444	".Make this "public static duration" field final(Š“ó 8€ñóåï1J$2b7261bf-5e17-47ae-81d7-109f01408bbf
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(ğÂ°ûıÿÿÿÿ8–ñóåï1J$23daae39-2463-42cb-b2bf-1c76b2a171d0
