@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  plc-app:
+    image: my-siemens-plc-app
+    ports:
+      - "4000:5000"
+    deploy:
+      replicas: 3
+      update_config:
+        parallelism: 1
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+    environment:
+      - NAME=World

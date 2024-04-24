@@ -40,7 +40,7 @@ public class GraphView extends Application {
         primary = primaryStage;
         root = new Pane();
         root.setPrefSize(800, 600);
-        primary.setTitle("THE KRACKEN SIMULATED CYBER-ATTACK");
+        primary.setTitle("THE KRAKEN SIMULATED CYBER-ATTACK");
 
         resultLabel = new Label();
         resultLabel.setWrapText(true);
