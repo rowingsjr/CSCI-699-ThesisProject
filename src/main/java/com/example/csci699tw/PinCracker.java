@@ -20,7 +20,6 @@ public class PinCracker
             if (pin.equals(targetPin)) {
                 duration = (System.currentTimeMillis() - startTime) / 1000.0;
                 correctPin = true;
-                //graphController.startBfsTraversal();  // Call BFS on correct PIN
                 return String.format("PIN cracked with brute force algorithm in %.2f seconds and this was the pin: %s",
                         duration, pin);
 
@@ -35,7 +34,6 @@ public class PinCracker
             if (pin.equals(targetPin)) {
                 duration = (System.currentTimeMillis() - startTime) / 1000.0;
                 correctPin = true;
-                //graphController.startBfsTraversal();  // Call BFS on correct PIN
                 return String.format("PIN cracked with brute force algorithm in %.2f seconds and this was the pin: %s",
                         duration, pin);
             }

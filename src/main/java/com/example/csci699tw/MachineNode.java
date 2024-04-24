@@ -54,7 +54,7 @@ public class MachineNode {
         if(status.equals("Idle"))
         {
             circle = new Circle(x, y, 20);
-            circle.setFill(Color.rgb(224, 209, 60)); // Initial color set to green
+            circle.setFill(Color.rgb(224, 209, 60));
 
             // Create the label
             Text label = new Text(name);
@@ -68,7 +68,7 @@ public class MachineNode {
         else if (status.equals("Maintenance") && !GraphView.bfsInProgress)
         {
             circle = new Circle(x, y, 20);
-            circle.setFill(Color.rgb(134, 34, 152)); // Initial color set to green
+            circle.setFill(Color.rgb(134, 34, 152));
 
             // Create the label
             Text label = new Text(name);
@@ -92,7 +92,7 @@ public class MachineNode {
         else if (status.equals("Stopped"))
         {
             circle = new Circle(x, y, 20);
-            circle.setFill(Color.rgb(189, 2, 44)); // Initial color set to green
+            circle.setFill(Color.rgb(189, 2, 44));
 
             // Create the label
             Text label = new Text(name);

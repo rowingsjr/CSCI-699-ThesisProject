@@ -46,14 +46,14 @@ public class GraphView extends Application {
         resultLabel.setWrapText(true);
         root.getChildren().add(resultLabel);
         // Position the label appropriately on the screen
-        resultLabel.setLayoutX(10); // for example
-        resultLabel.setLayoutY(10); // for example
+        resultLabel.setLayoutX(10);
+        resultLabel.setLayoutY(10);
 
         // Retrieve cached nodes from SetupGraph
         instance = this;
         nodes = SetupGraph.createMachineNodes(instance);
         display(nodes);
-        initializeAdjacencyList(); // This method should be defined to set up adjacency list
+        initializeAdjacencyList();
         addLegend(root);
 
         primaryStage.setScene(new Scene(root));
@@ -88,12 +88,6 @@ public class GraphView extends Application {
 
     }
 
-    public static List<MachineNode> getMachineNodes() {
-        if (nodes == null) {
-            throw new IllegalStateException("Machine nodes have not been initialized.");
-        }
-        return nodes;
-    }
     // Add a method to stop all animations
     public static void stopAllAnimations() {
         animations.forEach(Timeline::stop);
@@ -155,7 +149,6 @@ public class GraphView extends Application {
 
     public static void display(List<MachineNode> nodes) {
         nodes.forEach(node -> root.getChildren().add(node.createGraphic()));
-        //new GraphView().connectAndColorNodes(nodes);  // Optionally manage this based on application logic
     }
 
 
@@ -198,7 +191,7 @@ public class GraphView extends Application {
             int attempts = 0;
             final int MAX_ATTEMPTS = 3;
             boolean pinCorrect = false;
-            final String correctPin = "12348925"; // Assuming '1234' is the correct PIN
+            final String correctPin = "12348925";
 
             while (attempts < MAX_ATTEMPTS && !pinCorrect) {
                 pinDialog.setHeaderText("Enter Master SCADA PIN (" + (MAX_ATTEMPTS - attempts) + " attempts left)");
@@ -248,7 +241,7 @@ public class GraphView extends Application {
                     Platform.runLater(() -> {
                         for (MachineNode node : nodes) {
                             node.enableDetailOnClick();
-                            node.changeColor(Color.BLACK); // This should change the color of the node's circle to black
+                            node.changeColor(Color.BLACK);
                         }
                     });
                 });
@@ -268,7 +261,7 @@ public class GraphView extends Application {
         }
 
         MachineNode current = queue.poll();
-        Platform.runLater(() -> current.changeColor(Color.BLACK)); // This assumes the changeColor method sets the fill of the circle
+        Platform.runLater(() -> current.changeColor(Color.BLACK));
 
         List<MachineNode> adjNodes = adjacencyList.get(current);
         for (MachineNode adj : adjNodes) {
